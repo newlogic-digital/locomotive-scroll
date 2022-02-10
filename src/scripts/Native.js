@@ -1,5 +1,4 @@
 import Core from './Core';
-import smoothscroll from 'smoothscroll-polyfill';
 
 export default class extends Core {
     constructor(options = {}) {
@@ -13,11 +12,6 @@ export default class extends Core {
         }
 
         window.addEventListener('scroll', this.checkScroll, false);
-
-        if (window.smoothscrollPolyfill === undefined) {
-            window.smoothscrollPolyfill = smoothscroll;
-            window.smoothscrollPolyfill.polyfill();
-        }
     }
 
     init() {
