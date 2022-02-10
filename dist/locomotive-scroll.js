@@ -278,6 +278,7 @@
     draggingClass: 'has-scroll-dragging',
     smoothClass: 'has-scroll-smooth',
     initClass: 'has-scroll-init',
+    sectionSelector: null,
     getSpeed: false,
     getDirection: false,
     scrollFromAnywhere: false,
@@ -2284,7 +2285,7 @@
         var _this7 = this;
 
         this.sections = {};
-        var sections = this.el.querySelectorAll("[data-".concat(this.name, "-section]"));
+        var sections = this.el.querySelectorAll(this.sectionSelector ? this.sectionSelector : "[data-".concat(this.name, "-section]"));
 
         if (sections.length === 0) {
           sections = [this.el];
